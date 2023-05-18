@@ -1,0 +1,56 @@
+@import "../sass/variables.scss";
+@import "../sass/mixins.scss";
+
+.recipe-card {
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  width: 17rem;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  break-inside: avoid;
+  align-self: stretch;
+  &:hover {
+    outline: 2px solid $color-primary;
+    border: 1px solid transparent;
+  }
+  &__image-conainer {
+    height: 13rem;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+  cursor: pointer;
+  &__name {
+    margin-top: 0;
+  }
+  .star {
+    width: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .recipe-card {
+    display: flex;
+    height: 5rem;
+    @include container;
+    width: 100%;
+    &__image-conainer {
+      width: 30%;
+      height: 5rem;
+    }
+    &__description {
+      display: none;
+    }
+    &__text {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    &__name {
+      margin-bottom: 0;
+    }
+  }
+}

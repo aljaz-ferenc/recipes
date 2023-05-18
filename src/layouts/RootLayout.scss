@@ -1,0 +1,18 @@
+.root-layout {
+  display: grid;
+  grid-template-rows: 3rem auto;
+  height: 100%;
+
+  & > * {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .root-layout {
+    width: 100vw;
+    & > * {
+      padding: 0.2rem;
+    }
+  }
+}

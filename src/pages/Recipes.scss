@@ -1,0 +1,23 @@
+.recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5rem 0;
+  height: max-content;
+}
+
+@media (max-width: 768px) {
+  body {
+  }
+}
+
+@media (max-width: 375px) {
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+}

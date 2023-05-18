@@ -1,0 +1,18 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.my-recipes {
+  @include flex-col;
+  gap: 0.5rem;
+  h3 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import "./sass/variables.scss";
+@import "./sass/mixins.scss";
+@import "./layouts/ProfileLayout.scss";
+@import "./layouts/RecipesLayout.scss";
+@import "./layouts/RootLayout.scss";
+@import "./App.scss";
+@import "./pages/AddRecipe.scss";
+@import "./pages/Error.scss";
+@import "./pages/Favorites.scss";
+@import "./pages/Login.scss";
+@import "./pages/Recipes.scss";
+@import "./pages/SingleRecipe.scss";
+@import "./components/Account.scss";
+@import "./components/Comments.scss";
+@import "./components/FavoriteCard.scss";
+@import "./components/Filter.scss";
+@import "./components/Header.scss";
+@import "./components/MyRecipes.scss";
+@import "./components/RecipeCard.scss";
+@import "./components/ShoppingList.scss";
+@import "./components/SingleComment.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-color: rgb(248, 248, 248);
+  font-size: 1.2rem;
+  color: $color-text;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  background-color: $color-secondary;
+  border: none;
+  padding: 0.3rem 1rem;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $color-primary;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 0.8rem;
+  }
+}

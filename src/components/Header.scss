@@ -1,0 +1,61 @@
+@import "../sass/variables.scss";
+
+.header {
+  grid-column: 1 / -1;
+  padding: 0 !important;
+  background-color: $color-subtle;
+  &__navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    &--logout {
+      margin: 0 1rem;
+    }
+    a {
+      color: $color-text;
+      height: 100%;
+      text-decoration: none;
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: $color-secondary;
+      }
+      &.active:not(:last-child) {
+        background-color: orange;
+      }
+    }
+    &--favorites {
+      margin-right: auto;
+    }
+    &--profile {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      width: max-content;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100vw;
+    &__navigation {
+      &--logout {
+        margin: 0 0.5rem;
+      }
+      a {
+        padding: 0 2vw;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    &__navigation {
+      &--profile svg {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../sass/variables.scss";
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 80%;
+
+  &__list {
+    border: 1px solid $color-border;
+    border-radius: 5px;
+  }
+  .checkbox {
+    margin-left: auto;
+    cursor: pointer;
+  }
+  &__item {
+    display: flex;
+    padding: 0.3rem 0.5rem;
+    align-items: center;
+    &:hover {
+      background-color: $color-subtle;
+    }
+    svg {
+      cursor: pointer;
+      height: 1.2rem;
+      margin-left: 2rem;
+      &:hover {
+        stroke: red;
+      }
+    }
+    label {
+      cursor: pointer;
+    }
+    & .line-through {
+      text-decoration: line-through;
+      color: rgb(186, 186, 186);
+    }
+  }
+  &__add-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+    input {
+      width: 80%;
+      border: 1px solid $color-border;
+      border-right: none;
+      &:focus {
+        border: 1px solid transparent;
+        outline: 1px solid $color-primary;
+        outline-offset: -1px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .shopping-list {
+    &__add-item {
+      margin-bottom: 1rem;
+    }
+  }
+}

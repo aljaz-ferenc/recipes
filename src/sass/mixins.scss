@@ -1,0 +1,10 @@
+@mixin container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}

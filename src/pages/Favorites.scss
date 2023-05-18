@@ -1,0 +1,16 @@
+.favorites {
+  @include container;
+  @include flex-col;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .favorites {
+    width: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .favorites {
+    width: 100%;
+  }
+}

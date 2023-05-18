@@ -1,0 +1,28 @@
+@import "../sass/variables.scss";
+
+.filter {
+  grid-column: 1;
+  padding: 1rem;
+  height: max-content;
+  background-color: $color-subtle;
+  border-radius: 10px;
+  & h3 {
+    margin-top: 0;
+  }
+  & h4 {
+    margin-bottom: 0;
+  }
+  & label {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 375px) {
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    & h3 {
+      display: none;
+    }
+  }
+}

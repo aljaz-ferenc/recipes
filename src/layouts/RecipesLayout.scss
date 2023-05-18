@@ -1,0 +1,10 @@
+.recipes-layout {
+  display: grid;
+  grid-template-columns: 10rem auto;
+}
+
+@media (max-width: 375px) {
+  .recipes-layout {
+    grid-template-columns: 1fr;
+  }
+}
